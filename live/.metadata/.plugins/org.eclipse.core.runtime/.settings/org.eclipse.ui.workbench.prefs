@@ -1,0 +1,3 @@
+RUN_IN_BACKGROUND=true
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+eclipse.preferences.version=1

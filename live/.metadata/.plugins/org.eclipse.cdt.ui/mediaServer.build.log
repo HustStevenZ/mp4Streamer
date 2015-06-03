@@ -1,0 +1,10 @@
+13:42:59 **** Incremental Build of configuration Debug for project mediaServer ****
+make all 
+Building target: mediaServer
+Invoking: GCC C++ Linker
+g++ -L"/mnt/data/steven/workspace/2 MGV/live/liveMedia/Debug" -L"/mnt/data/steven/workspace/2 MGV/live/BasicUsageEnvironment/Debug" -L"/mnt/data/steven/workspace/2 MGV/live/groupsock/Debug" -L"/mnt/data/steven/workspace/2 MGV/live/UsageEnvironment/Debug" -o "mediaServer"  ./DynamicRTSPServer.o ./live555MediaServer.o   -lliveMedia -lBasicUsageEnvironment -lgroupsock -lUsageEnvironment
+Finished building target: mediaServer
+ 
+
+13:42:59 Build Finished (took 882ms)
+

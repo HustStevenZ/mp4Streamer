@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="groupsock" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/groupsock" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/groupsock" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="include" />
+			<Add directory="../groupsock" />
+			<Add directory="../UsageEnvironment/include" />
+		</Compiler>
+		<Unit filename="../../../../../../../../../mnt/data/steven/workspace/2 MGV/live/groupsock/include/IOHandlers.hh" />
+		<Unit filename="../../../../../../../../../mnt/data/steven/workspace/2 MGV/live/groupsock/include/NetInterface.hh" />
+		<Unit filename="GroupEId.cpp" />
+		<Unit filename="Groupsock.cpp" />
+		<Unit filename="GroupsockHelper.cpp" />
+		<Unit filename="IOHandlers.cpp" />
+		<Unit filename="NetAddress.cpp" />
+		<Unit filename="NetInterface.cpp" />
+		<Unit filename="include/GroupEId.hh" />
+		<Unit filename="include/Groupsock.hh" />
+		<Unit filename="include/GroupsockHelper.hh" />
+		<Unit filename="include/NetAddress.hh" />
+		<Unit filename="include/NetCommon.h" />
+		<Unit filename="include/TunnelEncaps.hh" />
+		<Unit filename="include/groupsock_version.hh" />
+		<Unit filename="inet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
