@@ -54,7 +54,7 @@ public:
     const StreamInfo* GetStreamInfo(int stream_id);
 private:
     ServerMediaSubsession* NewServerMediaSubsession(unsigned int type);
-    //detecte stream tags from file
+    //detect stream tags from file
     Boolean DetectedStream();
 
 private:

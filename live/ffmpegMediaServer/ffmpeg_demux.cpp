@@ -16,6 +16,7 @@ extern "C" {
 #include "libavcodec/avcodec.h"
 }
 
+
 //#define EX_DEBUG
 //#define NOT_USE_BITSTREAM_FILER  //do not use "h264_mp4toannexb" bitstream filter
 
@@ -429,17 +430,21 @@ int FfmpegDemux::ParseH264ExtraDataInMp4(int stream_id) {
     Convert(&(format_ctx_->streams[stream_id]->codec->extradata),
             format_ctx_->streams[stream_id]->codec->extradata_size);
 #else
+
     uint8_t *dummy = NULL;
     int dummy_size;
     AVBitStreamFilterContext* bsfc = av_bitstream_filter_init(
             "h264_mp4toannexb");
-
+    AVCodecContext* codec = format_ctx_->streams[stream_id]->codec;
+    if(codec == NULL || codec->extradata == NULL)
+    {
+    	return 0;
+    }
     if (bsfc == NULL) {
         envir() << "cannot open the h264_mp4toannexb\n";
         return -1;
     }
-    av_bitstream_filter_filter(bsfc, format_ctx_->streams[stream_id]->codec,
-            NULL, &dummy, &dummy_size, NULL, 0, 0);
+    av_bitstream_filter_filter(bsfc, codec,NULL, &codec->extradata, &codec->extradata_size, codec->extradata, codec->extradata_size, 0);
     av_bitstream_filter_close(bsfc);
 #endif
     return 0;
@@ -462,9 +467,10 @@ int FfmpegDemux::ReadOneFrame(AVPacket* packet, boolean &has_extra_data) {
         if (codec->codec_id == CODEC_ID_H264) {
             //pps and sps
             const char start_code[4] = { 0, 0, 0, 1 };
+
             std::memcpy(packet->data, start_code, 4);
 
-            if ((codec->extradata[0] != 0) && (ParseH264ExtraDataInMp4(
+            if ((codec->extradata != NULL) && (ParseH264ExtraDataInMp4(
                     stream_id) == 0)) {
                 has_extra_data = True;
             }
