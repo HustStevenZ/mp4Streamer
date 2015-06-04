@@ -444,7 +444,8 @@ int FfmpegDemux::ParseH264ExtraDataInMp4(int stream_id) {
         envir() << "cannot open the h264_mp4toannexb\n";
         return -1;
     }
-    av_bitstream_filter_filter(bsfc, codec,NULL, &codec->extradata, &codec->extradata_size, codec->extradata, codec->extradata_size, 0);
+    av_bitstream_filter_filter (bsfc, format_ctx_-> streams [stream_id] -> codec, NULL, & dummy, & dummy_size, NULL, 0, 0);
+//    av_bitstream_filter_filter(bsfc, codec,NULL, &codec->extradata, &codec->extradata_size, codec->extradata, codec->extradata_size, 0);
     av_bitstream_filter_close(bsfc);
 #endif
     return 0;
