@@ -10,6 +10,7 @@
 
 class SavedData; // forward
 class FfmpegDemuxedElementaryStream;
+class AVBitStreamFilterContext;
 struct AVPacket;
 #define boolean Boolean
 class FfmpegDemux: public Medium {
@@ -109,6 +110,7 @@ private:
     Boolean have_undelivered_data_;
 
     Boolean reclaim_last_es_dies_; //whether delete self when last es dies
+    AVBitStreamFilterContext* h264bsfc;
     int num_out_es_;
 };
 

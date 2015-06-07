@@ -19,7 +19,6 @@ extern "C" {
 
 //#define EX_DEBUG
 //#define NOT_USE_BITSTREAM_FILER  //do not use "h264_mp4toannexb" bitstream filter
-
 ////////// SavedData definition/implementation //////////
 
 class SavedData {
@@ -37,6 +36,8 @@ public:
     unsigned data_size_, num_bytes_used_;
 };
 
+FILE* testfile = NULL;
+int _264stream = -3;
 ////////// FfmpegDemux implementation //////////
 
 FfmpegDemux *FfmpegDemux::CreateNew(UsageEnvironment & env,
@@ -67,16 +68,20 @@ FfmpegDemux::FfmpegDemux(UsageEnvironment & env, char const *filename,
 
     reclaim_last_es_dies_ = reclaim_last_es_dies;
     num_out_es_ = 0;
+    h264bsfc =  NULL;
 }
 
 FfmpegDemux::~FfmpegDemux() {
     delete[] filename_;
+    fclose(testfile);
     ReinitFfmpeg();
     for (unsigned i = 0; i < 1024; ++i)
         delete output_[i].saved_data_head;
 }
 
 Boolean FfmpegDemux::InitFfmpeg() {
+
+	testfile = fopen("test.264","wb");
     av_register_all();
 
     if (avformat_open_input(&format_ctx_, filename_, NULL, NULL) != 0) {
@@ -164,7 +169,12 @@ Boolean FfmpegDemux::UseSavedData(u_int8_t stream_id_tag, unsigned char *to,
 
         if (numBytesToCopy > max_size)
             numBytesToCopy = max_size;
+
+        if(stream_id_tag == _264stream && testfile!=NULL)
+        fwrite(from,1,numBytesToCopy,testfile);
+
         std::memmove(to, from, numBytesToCopy);
+
         to += numBytesToCopy;
         max_size -= numBytesToCopy;
         out.saved_data_total_size -= numBytesToCopy;
@@ -467,14 +477,21 @@ int FfmpegDemux::ReadOneFrame(AVPacket* packet, boolean &has_extra_data) {
 
         if (codec->codec_id == CODEC_ID_H264) {
             //pps and sps
-            const char start_code[4] = { 0, 0, 0, 1 };
+//            const char start_code[4] = { 0, 0, 0, 1 };
 
-            std::memcpy(packet->data, start_code, 4);
-
-            if ((codec->extradata != NULL) && (ParseH264ExtraDataInMp4(
-                    stream_id) == 0)) {
-                has_extra_data = True;
+            _264stream = stream_id;
+            if(h264bsfc  == NULL)
+            {
+            	h264bsfc =  av_bitstream_filter_init("h264_mp4toannexb");
             }
+            av_bitstream_filter_filter(h264bsfc, codec, NULL, &packet->data, &packet->size, packet->data, packet->size, 0);
+
+//            std::memcpy(packet->data, start_code, 4);
+//
+//            if ((codec->extradata != NULL) && (codec->extradata[0] != 0) && (ParseH264ExtraDataInMp4(
+//                    stream_id) == 0)) {
+//                has_extra_data = True;
+//            }
         } else if (codec->codec_id == CODEC_ID_MPEG4) {
             static boolean first = True;
             if (first) {
