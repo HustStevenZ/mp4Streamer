@@ -36,8 +36,6 @@ public:
     unsigned data_size_, num_bytes_used_;
 };
 
-FILE* testfile = NULL;
-int _264stream = -3;
 ////////// FfmpegDemux implementation //////////
 
 FfmpegDemux *FfmpegDemux::CreateNew(UsageEnvironment & env,
@@ -73,7 +71,6 @@ FfmpegDemux::FfmpegDemux(UsageEnvironment & env, char const *filename,
 
 FfmpegDemux::~FfmpegDemux() {
     delete[] filename_;
-    fclose(testfile);
     ReinitFfmpeg();
     for (unsigned i = 0; i < 1024; ++i)
         delete output_[i].saved_data_head;
@@ -81,7 +78,6 @@ FfmpegDemux::~FfmpegDemux() {
 
 Boolean FfmpegDemux::InitFfmpeg() {
 
-	testfile = fopen("test.264","wb");
     av_register_all();
 
     if (avformat_open_input(&format_ctx_, filename_, NULL, NULL) != 0) {
@@ -169,9 +165,6 @@ Boolean FfmpegDemux::UseSavedData(u_int8_t stream_id_tag, unsigned char *to,
 
         if (numBytesToCopy > max_size)
             numBytesToCopy = max_size;
-
-        if(stream_id_tag == _264stream && testfile!=NULL)
-        fwrite(from,1,numBytesToCopy,testfile);
 
         std::memmove(to, from, numBytesToCopy);
 
