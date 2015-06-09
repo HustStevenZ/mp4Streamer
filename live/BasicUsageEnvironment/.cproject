@@ -53,8 +53,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.1092200941" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.lib.debug.1197915023" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.lib.debug">
 								<option id="gnu.both.asm.option.include.paths.1093938754" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1204466211" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
@@ -128,8 +127,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.1756747888" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.lib.release.1993046721" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.lib.release">
 								<option id="gnu.both.asm.option.include.paths.2085541857" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.920700130" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>

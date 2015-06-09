@@ -55,13 +55,10 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.381455754" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.lib.debug.1178310347" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.lib.debug">
 								<option id="gnu.both.asm.option.include.paths.1417715599" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.2135357207" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -126,7 +123,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/include}&quot;"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.other.other.434671364" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -fpermissive" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.434671364" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -fpermissive" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.794340832" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.lib.release.931178536" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.lib.release">
@@ -147,13 +144,10 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.base.2097648789" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.lib.release.759956261" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.lib.release">
 								<option id="gnu.both.asm.option.include.paths.1696170913" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia/include}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/include}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia/include}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1922015690" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>

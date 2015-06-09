@@ -55,10 +55,10 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.1364574730" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
 							<tool command="g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.577631483" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option id="gnu.cpp.link.option.paths.828116622" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia/Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/Release}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/Release}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia/Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/Debug}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/Debug}&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.1993462119" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="liveMedia"/>
@@ -76,10 +76,6 @@
 							</tool>
 							<tool command="as" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.tool.gnu.assembler.exe.debug.132398923" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
 								<option id="gnu.both.asm.option.include.paths.433327364" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/include}&quot;"/>
@@ -194,10 +190,6 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.976982519" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release">
 								<option id="gnu.both.asm.option.include.paths.1653314844" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/liveMedia}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/UsageEnvironment/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/groupsock/include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BasicUsageEnvironment/include}&quot;"/>

@@ -1892,3 +1892,34 @@ java.lang.Exception
 
 !ENTRY org.eclipse.cdt.core 1 0 2015-06-03 16:33:24.583
 !MESSAGE Indexed 'ffmpegMediaServer' (10 sources, 389 headers) in 4.13 sec: 24,203 declarations; 28,874 references; 0 unresolved inclusions; 0 syntax errors; 9 unresolved names (0.017%)
+!SESSION 2015-06-09 15:46:40.031 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.standard.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:47:31.665
+!MESSAGE Indexed 'BasicUsageEnvironment' (7 sources, 96 headers) in 2.36 sec: 4,349 declarations; 6,069 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:47:53.711
+!MESSAGE Indexed 'BasicUsageEnvironment' (7 sources, 96 headers) in 1.63 sec: 4,349 declarations; 6,069 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:48:27.863
+!MESSAGE Indexed 'ffmpegMediaServer' (10 sources, 389 headers) in 9.46 sec: 24,205 declarations; 28,898 references; 0 unresolved inclusions; 0 syntax errors; 10 unresolved names (0.019%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:50:26.882
+!MESSAGE Indexed 'ffmpegMediaServer' (10 sources, 389 headers) in 4.57 sec: 24,205 declarations; 28,898 references; 0 unresolved inclusions; 0 syntax errors; 10 unresolved names (0.019%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:50:47.444
+!MESSAGE Indexed 'groupsock' (8 sources, 267 headers) in 3.42 sec: 16,067 declarations; 25,459 references; 0 unresolved inclusions; 0 syntax errors; 5 unresolved names (0.012%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:50:59.238
+!MESSAGE Indexed 'groupsock' (8 sources, 267 headers) in 2.99 sec: 16,067 declarations; 25,459 references; 0 unresolved inclusions; 0 syntax errors; 5 unresolved names (0.012%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:51:31.304
+!MESSAGE Indexed 'liveMedia' (328 sources, 348 headers) in 10.9 sec: 36,760 declarations; 120,137 references; 0 unresolved inclusions; 0 syntax errors; 29 unresolved names (0.018%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-06-09 15:51:38.119
+!MESSAGE Indexed 'liveMedia' (166 sources, 323 headers) in 5.73 sec: 25,270 declarations; 68,011 references; 0 unresolved inclusions; 0 syntax errors; 15 unresolved names (0.016%)
